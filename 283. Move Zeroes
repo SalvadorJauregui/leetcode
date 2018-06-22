@@ -1,3 +1,4 @@
+/* Solution 1*/
 class Solution {
     public void moveZeroes(int[] nums) {
         int base, runner;
@@ -8,5 +9,23 @@ class Solution {
         }
         while(base < nums.length)
             nums[base++] = 0;
+    }
+}
+
+
+/* Solution 2 */
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int aux;
+        for (int base = 0, runner = 0; runner < nums.length; runner++){
+            if (nums[runner] != 0){
+                /* Swap */
+                aux = nums[base];                
+                nums[base] = nums[runner];
+                nums[runner] = aux;
+                ++base;
+            }
+            
+        }
     }
 }
