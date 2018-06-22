@@ -1,0 +1,12 @@
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int base, runner;
+        for (base = 0, runner = 0; runner < nums.length; runner++){
+            if (nums[runner] == 0)
+                continue;
+            nums[base++] = nums[runner];
+        }
+        while(base < nums.length)
+            nums[base++] = 0;
+    }
+}
