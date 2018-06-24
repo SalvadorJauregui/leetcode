@@ -15,3 +15,26 @@ class Solution {
         return (Character.toLowerCase(c)-'a'+1);
     }
 }
+
+
+/*****************************************/
+/* Convert numberTotittle */
+    public static String numberToTittle(int n) {
+        StringBuilder sb = new StringBuilder();
+        final int base = 26;
+        int rem;
+
+        while (n > base) {
+            rem = n % base;
+            sb.append(convert(rem == 0 ? base : rem));
+            if (rem == 0) {
+                --n;
+            }
+            n /= base;
+        }
+        sb.append(convert(n));
+        return sb.reverse().toString();
+    }
+
+    public static String convert(int n) {
+       
