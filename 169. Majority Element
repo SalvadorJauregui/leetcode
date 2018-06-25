@@ -1,6 +1,23 @@
 /* Solution 1 */
 class Solution {
     public int majorityElement(int[] nums) {
+        int count = 0;
+        Integer candidate = null;
+
+        for (int num : nums) {
+            if (count == 0) {
+                candidate = num;
+            }
+            count += (num == candidate) ? 1 : -1;
+        }
+
+        return candidate;
+    }
+}
+
+/* Solution 2 */
+class Solution {
+    public int majorityElement(int[] nums) {
         int elem = 0, count = 0;
         for (int i : nums){
             if (count == 0){
@@ -16,7 +33,7 @@ class Solution {
     }
 }
 
-/* Solution 2 */
+/* Solution 3 */
 class Solution {
     public int majorityElement(int[] nums) {
         Arrays.sort(nums);
