@@ -18,7 +18,7 @@ Example 3:
 Input: [1,1,1,3,3,4,3,2,4,2]
 Output: true
 
-/* Solution 1: Use a Set to validate duplicated elements. 11 ms */
+/* Solution 1: Use a Set to validate duplicated elements. */
 class Solution {
     public boolean containsDuplicate(int[] nums) {
         Set<Integer> set = new HashSet<>();
@@ -35,7 +35,7 @@ class Solution {
     }
 }
 
-/* Solution 2: Sort elements and check if there are two same contiguos elements. 5 ms */
+/* Solution 2: Sort elements and check if there are two same contiguos elements. */
 class Solution {
     public boolean containsDuplicate(int[] nums) {
         Arrays.sort(nums);
