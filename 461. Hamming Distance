@@ -21,9 +21,8 @@ Explanation:
 The above arrows point to positions where the corresponding bits are different.
 
 
-/* Solution */
+/* Solution 1 */
 class Solution {
-    /* Assumption: x and y are both same length and positives */
     
     public int hammingDistance(int x, int y) {
         int countDiffBits = 0;
@@ -37,6 +36,32 @@ class Solution {
             y>>=1;
             x>>=1;
             base>>=1;
+        }
+        return countDiffBits;
+    }
+}
+
+
+/* Solution 2 */
+public class Solution {
+    public int hammingDistance(int x, int y) {
+        return Integer.bitCount(x ^ y);
+    }
+}
+
+/* Solution 3 */
+class Solution {    
+    
+    public int hammingDistance(int x, int y) {
+        int countDiffBits = 0;
+        int distance = x ^ y;
+        
+        while(distance>0){
+            /* Compare the rightmost bits */
+            if ((distance & 1) == 1)
+                ++countDiffBits;
+            /* Move one bit to the right */            
+            distance>>=1;
         }
         return countDiffBits;
     }
