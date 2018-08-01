@@ -66,3 +66,24 @@ class Solution {
         return countDiffBits;
     }
 }
+
+
+
+/* Solution 4 */
+class Solution {    
+    
+    /* Brian Kernighan's bit counting algorithm */
+    public int hammingDistance(int x, int y) {
+        int countDiffBits = 0;
+        int distance = x ^ y;
+        
+        while(distance>0){
+            /* Compare the rightmost bits */
+            if (distance != 0)
+                ++countDiffBits;
+            /* Move one bit to the right */            
+            distance &= (distance-1);
+        }
+        return countDiffBits;
+    }
+}
