@@ -1,0 +1,30 @@
+
+https://leetcode.com/problems/reverse-linked-list/description/
+
+
+Reverse a singly linked list.
+
+Example:
+
+Input: 1->2->3->4->5->NULL
+Output: 5->4->3->2->1->NULL
+
+
+
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        ListNode prev = null;
+        ListNode current = head;
+        ListNode tmp = null;
+        
+        while (current != null){            
+            tmp = current.next;
+            current.next = prev;
+            
+            prev = current;
+            current = tmp;
+        }
+        return prev;
+    }
+  
+}
