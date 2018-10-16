@@ -37,7 +37,7 @@ Note:
 0 <= deck[i] < 10000
 
 
-/***** SOLUTION *****/
+/***** SOLUTION 1 *****/
 
 class Solution {
     public static boolean hasGroupsSizeX(int[] deck) {
@@ -67,5 +67,27 @@ class Solution {
 				return true;
 		}
 		return false;
+	}
+}
+
+
+/***** SOLUTION 2 *****/
+class Solution {
+    public static boolean hasGroupsSizeX(int[] deck) {
+		int[] map = new int[10001];        
+		int gcdValue = 0;
+
+		for (int i : deck)
+			map[i]++;
+		
+		for (int i : map)
+			if (i != 0)
+                gcdValue = gcd(i, gcdValue);				
+
+		return gcdValue > 1;		
+	}
+
+	public static int gcd(int a, int b) {
+		return b > 0 ? gcd(b, a % b) : a;
 	}
 }
