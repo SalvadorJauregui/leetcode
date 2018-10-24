@@ -1,0 +1,39 @@
+https://leetcode.com/contest/weekly-contest-107/problems/long-pressed-name/
+
+
+Your friend is typing his name into a keyboard.  Sometimes, when typing a character c, 
+the key might get long pressed, and the character will be typed 1 or more times.
+
+You examine the typed characters of the keyboard.  Return True if it is possible that
+it was your friends name, with some characters (possibly none) being long pressed.
+
+ 
+
+Example 1:
+Input: name = "alex", typed = "aaleex"
+Output: true
+Explanation: 'a' and 'e' in 'alex' were long pressed.
+
+
+/***** SOLUTION ****/
+
+class Solution {
+  public static boolean isLongPressedName(String name, String typed) {
+		int j = 0, i = 0;
+		boolean mapped = false;
+
+		for (i = 0; i < name.length() && j < typed.length(); i++,j++) {
+			char n = name.charAt(i);
+			char t = typed.charAt(j);
+			mapped = false;			
+
+			while ( j < typed.length()-1 && t != n )
+				t = typed.charAt(++j);
+		
+			if ( t == n )
+				mapped = true;		
+
+		}
+		return i == name.length() && mapped;
+	}
+}
