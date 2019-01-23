@@ -1,0 +1,54 @@
+https://leetcode.com/problems/jewels-and-stones/submissions/
+
+class Solution {
+    public int numJewelsInStones(String J, String S) {
+     		int[] mapLowerCase = new int[26];
+		    int[] mapUpperCase = new int[26];
+	    	char letter;
+    		int count = 0;
+    
+    		/* Mark letter in J in O(J.length)*/
+            for (int i = 0; i < J.length(); i++){
+                letter = J.charAt(i);
+                if (Character.isLowerCase(letter) == true) {
+                    if (mapLowerCase[letter - 'a'] == 0)
+                        mapLowerCase[letter - 'a']++;
+                }else {
+                    if (mapUpperCase[letter -'A'] == 0)
+                        mapUpperCase[letter -'A']++;
+                }								
+            }
+		
+            /* Check for the jewels in S in O(S.length) */
+            for (int i = 0; i < S.length(); i++) {
+                letter = S.charAt(i);
+
+                /* It is a Jewel?*/
+                if (Character.isLowerCase(letter) == true) {
+                    if (mapLowerCase[letter - 'a'] > 0)
+                        mapLowerCase[letter -'a']++;
+                }else {
+                    if (mapUpperCase[letter -'A'] > 0)
+                        mapUpperCase[letter -'A']++;
+                }
+
+            }
+
+            /* Sum in O(26 x 2)*/
+            for (int i : mapLowerCase) {
+                if (i > 0) {
+                    count += i;
+                    count--;
+                }
+            }
+
+            for (int i : mapUpperCase) {
+                if (i > 0) {
+                    count += i;
+                    --count;
+                }
+            }
+		
+            return count;
+        }
+}
