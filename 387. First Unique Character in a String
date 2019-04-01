@@ -26,6 +26,25 @@ class Solution {
     }    
 }
 
+Run time: 38 ms, Memory:	39.2 MB
+class Solution {
+    public int firstUniqChar(String s) {
+		Map<Character, Integer> map = new HashMap<>();
+		
+		/* add to map */
+		for (char c : s.toCharArray()) {
+			map.put(c, map.getOrDefault(c, 0) + 1 );
+		}		
+		
+		/* Found the unique char */
+		for (int i = 0 ; i < s.length(); i++) {
+			if (map.get(s.charAt(i)) == 1)
+				return i;
+		}		
+		return -1;	
+    }
+}
+
 
 Run time: 44 ms, Memory:	39.5 MB
 class Solution {
