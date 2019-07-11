@@ -1,0 +1,24 @@
+https://leetcode.com/problems/balanced-binary-tree/
+
+
+class Solution {
+    public boolean isBalanced(TreeNode root) {
+        if (root == null)
+            return true;
+        
+        System.out.println("L: " + heightTree(root.left) + "  R: " + heightTree(root.right));
+        return (Math.abs(heightTree(root.left) - heightTree(root.right)) < 2) 
+               && isBalanced(root.left) && isBalanced(root.right);
+        
+    }    
+    
+    public int heightTree(TreeNode root){
+        /* base case */
+        if (root == null)
+            return 0;
+        
+        /* recursion */
+        return (1 + Math.max(heightTree(root.left),heightTree(root.right)));        
+    }
+
+}
