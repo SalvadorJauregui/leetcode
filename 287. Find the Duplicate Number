@@ -21,7 +21,28 @@ There is only one duplicate number in the array, but it could be repeated more t
 
 
 /* SOLUTION 1*/
+https://leetcode.com/submissions/detail/255026989/
+class Solution {
+    
+    public int findDuplicate(int[] nums) {
+        int slow = nums[0];
+        int fast = nums[0];
 
+        /* Until they intersect  */
+        do{
+            slow = nums[slow];
+            fast = nums[nums[fast]];            
+        }while(fast != slow);
+        
+        /* Find the duplicated */
+        int runner = nums[0];        
+        while(runner != slow){
+            runner = nums[runner];
+            slow = nums[slow];
+        }        
+        return slow;
+    }
+}
 
 
 /* SOLUTION 2 */
