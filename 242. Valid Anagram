@@ -7,10 +7,10 @@ class Solution {
        
         int[] countWords = new int[26];               
         
-        for (int i = 0; i < s.length(); i++)
-            countWords[s.charAt(i) - 'a']++;
-        for( int i = 0; i < t.length(); i++)
+        for (int i = 0; i < s.length(); i++){
+            countWords[s.charAt(i) - 'a']++;        
             countWords[t.charAt(i) - 'a']--;
+        }
         for (int letter : countWords)
             if (letter !=0)
                 return false;
