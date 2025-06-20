@@ -14,7 +14,8 @@ Constraints
 ## [Solution 1: ](link)
 
 ### Idea
-
+#### Mnemonic
+#### Steps
 ### Complexity
 **TC:**
 
@@ -29,6 +30,8 @@ Constraints
 ## [Solution 2: ](link)
 
 ### Idea
+#### Mnemonic
+#### Steps
 
 ### Complexity
 **TC:**
