@@ -12,15 +12,13 @@ Description
 Example
 Constraints
 ```
-## [Solution 1: ]( ____LINK____ )
+## [Solution 1: Key_words ]( ____LINK____ )
 
 ### Idea
 #### Mnemonic
 #### Steps
 ### Complexity
-**TC:**
-
-**SC:**
+**TC:** ; **SC:**
 
 ### Code
 ```java
@@ -28,7 +26,7 @@ Constraints
 ```
 
 
-## [Solution 2: ]( ____LINK____ )
+## [Solution 2: Key_words ]( ____LINK____ )
 
 ### Idea
 #### Mnemonic
