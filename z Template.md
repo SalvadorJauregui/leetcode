@@ -1,5 +1,5 @@
 
-# [Leet_code_problem_name - E/M/H](link)
+# [Leet_code_problem_name - E/M/H]( ____LINK____)
 
 `Difficult: Easy/Medium/Hard`
 `Topics:`
@@ -12,7 +12,7 @@ Description
 Example
 Constraints
 ```
-## [Solution 1: ](link)
+## [Solution 1: ]( ____LINK____ )
 
 ### Idea
 #### Mnemonic
@@ -28,7 +28,7 @@ Constraints
 ```
 
 
-## [Solution 2: ](link)
+## [Solution 2: ]( ____LINK____ )
 
 ### Idea
 #### Mnemonic
