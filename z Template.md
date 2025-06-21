@@ -1,6 +1,7 @@
 
-# [E/M/H - Leet_code_problem_name](link)
+# [Leet_code_problem_name - E/M/H](link)
 
+`Difficult: Easy/Medium/Hard`
 `Topics:`
 
 Description
