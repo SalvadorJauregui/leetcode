@@ -35,9 +35,7 @@ Constraints
 #### Steps
 
 ### Complexity
-**TC:**
-
-**SC:**
+**TC:** ; **SC:**
 
 ### Code
 ```java
